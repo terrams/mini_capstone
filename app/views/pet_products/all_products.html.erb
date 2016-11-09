@@ -55,12 +55,15 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
+                                    product 1
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
                                 <div class="item">
+                                    product 2
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
                                 <div class="item">
+                                    product 3
                                     <img class="slide-image" src="http://placehold.it/800x300" alt="">
                                 </div>
                             </div>
@@ -81,14 +84,15 @@
                 <% @array.each do |product| %>
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src= <%= product.image %> width="320px" height="150px">
                             <div class="caption">
-                                <h4 class="pull-right"><%= product.price %></h4>
-                                <h4><a href="#"> <%= product.name.upcase %></a>
-                                </h4>
-                                <p> <%= product.description.capitalize %><br>
-                                Size: <%= product.size %><br>
-                                Color: <%= product.color %></p>
+                                <h5 class="pull-right"><%= product.price %></h5>
+                                <h5><a href="#"> <%= product.name.upcase %></a>
+                                </h5>
+                                <p> <%= product.description.capitalize %></p>
+                                <p><span style="float:right">Color: <%= product.color.capitalize %></span>
+                                Size: <%= product.size.capitalize %></p>
+
                             </div>
                         </div>
                     </div>                
